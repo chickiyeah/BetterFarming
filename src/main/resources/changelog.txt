@@ -1,0 +1,10 @@
++ ADDED API
+
+  You can access it by using the BetterFarmingAPI class
+
++ ADDED Playerskins support to menus
+
+# FIXED Settings menu issue
+# FIXED {role} placeholder
+# FIXED Default role settings
+# FIXED Default role icons

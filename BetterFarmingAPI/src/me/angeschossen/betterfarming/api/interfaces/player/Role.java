@@ -1,6 +1,6 @@
 package me.angeschossen.betterfarming.api.interfaces.player;
 
-import com.sun.istack.internal.NotNull;
+import org.jetbrains.annotations.NotNull;
 import me.angeschossen.betterfarming.api.enums.RoleSetting;
 import org.bukkit.inventory.ItemStack;
 
@@ -26,7 +26,7 @@ public interface Role {
 
     int getPriority();
 
-    void getPriority(@NotNull int priority);
+    void getPriority(int priority);
 
     boolean addSetting(RoleSetting roleSetting);
 
