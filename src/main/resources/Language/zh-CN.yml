@@ -1,0 +1,102 @@
+# Here you can edit all chat messages
+# GUI strings can be found in <language>_gui.yml
+# If you encounter any issues, contact lands support.
+# Plugin page: https://www.spigotmc.org/resources/authors/315463/
+# Discord: https://discord.gg/B4MAJVk
+# 
+# ###############################
+# About chat message type system:
+# Does only work for messages in
+# "message" or "command" section.
+# ###############################
+# 
+# You can use some codes to set the type
+# of a message to title, actionbar or chat.
+# How does it work:
+# 
+# For example we want to print the prefix as a title:
+# Set general.noPerm to: '#t#&cYou''re not allowed to do this.' (Set "#t#" in front of it)
+# This would just print it as a title.
+# 
+# You also can set in, stay and out fade timings in seconds:
+# Set for example general.prefix to: '#t#!!1!!2!!3!!&cYou''re not allowed to do this.'
+# This would display this message as a title with
+# a fade in delay of 1 seconds, a stay time with 2 seconds
+# and a fade out delay of 3 seconds.
+# 
+# You also can display it as a actionbar message:
+# Just add "#a#" in front of it.
+# If you want to display it in chat, just don't set any
+# of these in front of it or use "#c#".
+# 
+# Also you can combine these modes:
+# Set for example general.prefix to: '#c#a#t#!!1!!2!!3!!&cYou''re not allowed to do this.'
+# This would print this message as chat, actionbar and an title with an in delay (1 seconds),
+# stay time (2 seconds) and fade out delay (3 seconds)
+# For any questions or issues, please contact us on discord or via pm.
+# --------------------------
+
+
+general:
+  prefix: '&b&l系统》&7'
+  farm:
+    crop: '&a作物'
+    animal: '&9动物'
+  time:
+    seconds: 秒
+    minutes: 分
+    hours: 时
+    days: day(s)
+message:
+  player-offline: '&7玩家&B{player}&7不在线'
+  player-not-exist: '&7未找到玩家&b{player}'
+  no-access:
+    no-permission: '&7你没有权限这么做'
+    general: '&7你不能这么做,这个农场方块属于&b{owner}'
+    block_break: '&7你不能这么做,这个农场方块属于&b{owner}'
+    block_place: '&7你不能这么做,这片农场属于&b{owner}'
+    interact: '&7你不能这么做,这片农场属于&b{owner}'
+    plant: '&7你不能这么做,这片农场属于&b{owner}'
+    harvest: '&7你不能这么做,这片农场属于&b{owner}'
+  farm-created: '#t#&2创建完毕{newline}&a快去种植作物吧'
+  farm-deleted: '#t#&c删除完毕{newline}&a哦...好吧'
+  creation:
+    spam: '&7你不能在这附近创建农场方块'
+    environment: '&7你不能在水和岩浆中放置农场方块,快去找个更好的地方吧'
+    other-farm: '&7你不能在这放置农场方块,他附近有一个&b{player}&7的农场方块,快去找个更宽阔的地方吧!'
+    max-farms: '&7你最多可放置&b{max}&7个农场方块,请尝试升级位阶来提高上限'
+    owner: '&7你不能使用这个农场方块,它属于&b{owner}'
+    world: '&7当前世界无法使用农场方块'
+  chat-action:
+    player: '&7请输入目标玩家的名称'
+    role:
+      name: '&7请输入新的身份名称'
+      max: '&7你最多能创建&b{max}&7个身份'
+command:
+  general:
+    cmd-not-exist: '&7该指令不存在'
+    cant-afford: '&7你需要&b{cost}&f가&7来购买'
+    player-offline: '&7玩家&b{player}&7不在线'
+    invalid-number: '&7你在&b{argument}&7参数中输入了无效的数值,请重试'
+  get:
+    confirm: '&7是否花费&b{costs}&f가&7购买一个农场方块,确认请输入&b/Farm get confirm'
+    dropped: '&7你已花费&b{cost}&f가&7购买了农场方块,由于你的背包已满,已掉落至地面,请及时拾取'
+    success: '&7你已花费&b{cost}&f가&7购买了农场方块'
+  give:
+    success-sender: '&7已给予&b{items}&7个农场方块给&b{player}'
+    success-target: '&7你获得了&b{items}&7个农场方块'
+    dropped: '&7你获得了&b{items}&7个农场方块,但是你的背包已满,已掉落至地面,请及时拾取'
+  help:
+    page-not-exist: '&7页数&b{page}&7不存在'
+help:
+  general:
+    prefix: '&7用法: '
+    header: '&7'
+    page: '&7使用&8/&2Farm help {next} &7查看下一页帮助. <> = 必要 [] = 可选'
+    footer: '&7'
+  command:
+    help: '&8/&aFarm help &8[&a页数&8] - &7查看帮助'
+    get: '&8/&aFarm get &8- &7从服务器购买一个农场方块'
+    give: '&8/&aFarm give &8<&7玩家&8> [&7数量&8] [&7有效半径&8] [&7增长间隔&8] [&7存储格子&8] - &7给予农场方块'
+    admin:
+      reload: '&8/&aFarm reload &8- &7重载插件'

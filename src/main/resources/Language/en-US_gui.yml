@@ -74,7 +74,8 @@ physical-Item:
       - '&8- &7Radius:&a {radius} &7blocks'
       - '  &7Growth:&a {time}'
       - '  &7Storage:&a {storage} &7slots'
-    material: 'DROPPER'
+      - '  &7Run time:&5 {run-time}'
+    material: 'END_ROD'
 
 skull:
   role:
@@ -128,6 +129,20 @@ gui:
         material: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTRkNDliYWU5NWM3OTBjM2IxZmY1YjJmMDEwNTJhNzE0ZDYxODU0ODFkNWIxYzg1OTMwYjNmOTlkMjMyMTY3NCJ9fX0='
         slot: 32
     f:
+      charge:
+        name: '&eRun Time'
+        lore:
+          - '&7Time left:&5 {time}'
+          - ' '
+          - '&7Click here to'
+          - '&7add more run time'
+          - '&7to this farm.'
+          - ' '
+          - '&8- &7If the time is over,'
+          - '  &7the farm will stop his'
+          - '  &7tasks.'
+        material: 'CLOCK'
+        slot: 33
       upgrade_radius:
         name: '&7> &bUpgrade Radius'
         lore:
@@ -536,13 +551,8 @@ gui:
       object:
         name: '&e{player}'
         lore:
-          - '&bLEFT CLICK'
-          - '&7Promote this player.'
-          - ' '
-          - '&9RIGHT CLICK'
-          - '&7Demote this player.'
-          - ' '
-          - '[Work in progress]'
+          - '&7You can promote / demote'
+          - '&7players in the trusted players menu.'
         material: 'PLAYER_HEAD'
         from: 10
         to: 18
@@ -762,4 +772,62 @@ gui:
       placeholder_2:
         material: 'GRAY_STAINED_GLASS_PANE'
         from: 29
+        to: 36
+
+  farm_charge:
+    title: 'Charge Time'
+    size: 36
+    f:
+      back:
+        name: '&cBack'
+        lore:
+          - '&7Go back to'
+          - '&e{back}&7.'
+        material: 'RED_STAINED_GLASS_PANE'
+        slot: 28
+      page_previous:
+        name: '&9Previous Page'
+        lore:
+          - '&7Go to previous page:&9 {previous}'
+          - ' '
+          - '&8- &7Current:&b {current}'
+        material: 'ARROW'
+        slot: 30
+      page_next:
+        name: '&aNext Page'
+        lore:
+          - '&7Go to next page:&9 {next}'
+          - ' '
+          - '&8- &7Current:&b {current}'
+        material: 'ARROW'
+        slot: 34
+      final-time:
+        name: '&8> &eTime after Charge'
+        lore:
+          - '&7After charge:&5 {time}'
+          - '&7Current time: {current}'
+        material: 'CLOCK'
+        slot: 32
+    l:
+      object:
+        name: '&b{item}'
+        lore:
+          - '&7This item will add'
+          - '&5{time} &7to'
+          - '&7the farms run time.'
+          - ' '
+          - '&7Click on this item'
+          - '&7to remove it from'
+          - '&7this charge.'
+        material: 'PAPER'
+        from: 10
+        to: 27
+    p:
+      placeholder_1:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 1
+        to: 9
+      placeholder_2:
+        material: 'GRAY_STAINED_GLASS_PANE'
+        from: 27
         to: 36

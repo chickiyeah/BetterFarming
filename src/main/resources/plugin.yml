@@ -1,6 +1,6 @@
 main: me.angeschossen.betterfarming.BetterFarming
 name: BetterFarming
-version: 1.8.3.6
+version: ${project.version}
 api-version: 1.13
 load: POSTWORLD
 
@@ -55,4 +55,10 @@ permissions:
             default: op
           betterfarming.bypass.interact:
             description: Bypass interact block protection.
+            default: op
+          betterfarming.bypass.delete:
+            description: Delete other players farms.
+            default: op
+          betterfarming.bypass.menu:
+            description: Open other players farm menu.
             default: op

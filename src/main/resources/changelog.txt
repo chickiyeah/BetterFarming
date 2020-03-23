@@ -1,10 +1,9 @@
-+ ADDED API
+1.8.7.1
++ ADDED Option to disable to crop visual update helper
 
-  You can access it by using the BetterFarmingAPI class
+  # With this option you can randomize the visual update of the farm crops.
+  # This helps to improve client and server performance. It does not affect any growth speed or the effeciency of the farm.
+  update-helper: true
 
-+ ADDED Playerskins support to menus
-
-# FIXED Settings menu issue
-# FIXED {role} placeholder
-# FIXED Default role settings
-# FIXED Default role icons
+# FIXED Live time placeholder in farm item
+    &7Run time:&5 {run-time}

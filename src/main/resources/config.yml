@@ -3,6 +3,7 @@ general:
   # Language
   # Pre translated:
   # English: en-US
+  # Chinese: zh-CN
   language: 'en-US'
   # Worlds were players can create farms.
   # NOTE: This setting requires server reload.
@@ -22,6 +23,7 @@ database:
     ip-address: 'localhost'
     port: '3306'
     database: 'betterfarming'
+    table-prefix: ''
     user: 'minecraft'
     password: 'password'
 
@@ -95,6 +97,10 @@ farm:
     # that it goes for example 4 blocks
     # down, instead of up.
     y-minus: 4
+  # With this option you can randomize the visual update of the farm crops.
+  # This helps to improve client and server performance. It does not affect any growth speed or the effeciency of the farm.
+  update-helper: true
+
 
   # DEFAULT Role Settings
   # They will only apply for new farms.
@@ -108,6 +114,17 @@ farm:
         - INTERACT
     visitor:
       settings-visitor_list: []
+
+  # Crop farm specific settings
+  crop:
+    livetime:
+      enabled_10: true
+      # Timeunit is seconds
+      start-time: 21600
+      # Let your players charge their farm with the following items.
+      # Format: ITEM:TIME_IN_SECONDS
+      charge-items-crop_list:
+        - BONE_MEAL:60
 
 # Crop Settings
 crop:
